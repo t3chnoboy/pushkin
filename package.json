@@ -1,0 +1,27 @@
+{
+  "name": "pushkin-contest-entry",
+  "version": "0.0.1",
+  "description": "pushkin-contest-entry",
+  "author": "Dmitry Mazuro <dmitry.mazuro@icloud.com>",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha --harmony"
+  },
+  "devDependencies": {
+    "co": "^3.0.5",
+    "co-mocha": "0.0.2",
+    "coffee-script": "git://github.com/xixixao/coffee-script.git",
+    "gulp": "^3.6.0",
+    "gulp-coffee-es6": "git://github.com/t3chnoboy/gulp-coffee-es6.git#d927a13a0c807f01166f1d17694694b776590080",
+    "mocha": "^1.18.2",
+    "should": "^3.2.0"
+  },
+  "dependencies": {
+    "cheerio": "^0.14.0",
+    "co-request": "^0.2.0",
+    "iconv-lite": "^0.2.11"
+  },
+  "engines": {
+    "node": ">= 0.11.0"
+  }
+}
