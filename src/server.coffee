@@ -17,7 +17,7 @@ app.post '/registration', -->
   token = body.token
   fs.writeFileSync './token.txt', body.token
   @body =
-    answer: solve '2', body.question
+    answer: 'снежные'
 
 app.post '/quiz', -->
   body = yield parse @, limit: '1kb'
