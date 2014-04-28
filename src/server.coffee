@@ -21,7 +21,7 @@ app.post '/registration', -->
 
 app.post '/quiz', -->
   body = yield parse @, limit: '1kb'
-  answer = solve body.level, body.question
+  answer = solve '' + body.level, body.question
   response =
     answer: answer
     token: token
