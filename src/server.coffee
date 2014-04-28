@@ -13,6 +13,7 @@ app.use router(app)
 
 app.post '/registration', -->
   body = yield parse @, limit: '1kb'
+  console.log body
   token = body.token
   fs.writeFileSync './token.txt', body.token
   @body =
