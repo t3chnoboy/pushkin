@@ -22,7 +22,7 @@
     "iconv-lite": "^0.2.11",
     "koa": "^0.5.5",
     "koa-bodyparser": "^1.0.1",
-    "koa-router": "^3.1.2"
+    "koa-route": "^1.1.2"
   },
   "engines": {
     "node": ">= 0.11.0"
