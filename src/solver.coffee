@@ -2,8 +2,8 @@ poemsFile = require('fs').readFileSync './poems.json', 'utf8'
 poems = JSON.parse poemsFile
 
 splitPoems = poems.map (poem) ->
-  lines = poem.text?.split('\n')
-  lines = lines?.map (line) -> line.match /([А-Яа-я]+)/g
+  lines = poem.text?.split('\n').map (line) ->
+    line.match /([А-Яа-я]+)/g
   lines?.pop()
   return lines
 
@@ -45,7 +45,6 @@ level5 = (str) ->
             else mismatchIndex = index
           if matches is words.length - 1
             return "#{line[mismatchIndex]},#{words[mismatchIndex]}"
-  return 'nigg'
 
 
 solve = (level, string) ->
