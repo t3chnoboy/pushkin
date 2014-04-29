@@ -23,15 +23,12 @@ describe 'tasks', ->
 
       line = 'Ямщик лихой, седое время'
       title = solve '1', line
-      console.log title
 
       line = 'И впредь у нас не разрывайте'
       title = solve '1', line
-      console.log title
 
       line = 'Иль ходит месяц средь небес'
       title = solve '1', line
-      console.log title
 
   describe 'level 2', ->
     it 'should find the missing word in one line', ->

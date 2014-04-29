@@ -37,7 +37,7 @@ level5 = (str) ->
     if poem
       for line in poem
         matches = 0
-        mismatchIndex = 0
+        mismatchIndex = -1
         if line?.length is words.length
           for word, index in line
             if word is words[index]
@@ -47,7 +47,7 @@ level5 = (str) ->
             return "#{line[mismatchIndex]},#{words[mismatchIndex]}"
 
 
-solve = (level, string) ->
+module.exports = solve = (level, string) ->
   switch level
     when '1' then level1 string
     when '2' then level2 string
@@ -55,5 +55,3 @@ solve = (level, string) ->
     when '4' then level4 string
     when '5' then level5 string
     else ''
-
-module.exports = solve
