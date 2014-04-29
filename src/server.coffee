@@ -1,6 +1,5 @@
 fs         = require 'fs'
 koa        = require 'koa'
-parse      = require 'co-body'
 router     = require 'koa-router'
 request    = require 'co-request'
 solve      = require '../lib/solver'
