@@ -36,14 +36,14 @@ level5 = (str) ->
   for poem in splitPoems
     if poem
       for line in poem
-        i = 0
+        matches = 0
         mismatchIndex = 0
         if line?.length is words.length
           for word, index in line
             if word is words[index]
-              i++
+              matches++
             else mismatchIndex = index
-          if i is words.length - 1
+          if matches is words.length - 1
             return "#{line[mismatchIndex]},#{words[mismatchIndex]}"
   return 'nigg'
 

@@ -1,12 +1,12 @@
-koa = require 'koa'
-router = require 'koa-router'
-parse = require 'co-body'
-solve = require '../lib/solver'
-fs = require 'fs'
+fs      = require 'fs'
+koa     = require 'koa'
+parse   = require 'co-body'
+router  = require 'koa-router'
 request = require 'co-request'
+solve   = require '../lib/solver'
 
+url   = 'http://pushkin-contest.ror.by/quiz'
 token = fs.readFileSync './token.txt', 'utf8'
-url = 'http://pushkin-contest.ror.by/quiz'
 
 app = koa()
 app.use router(app)
@@ -15,7 +15,7 @@ app.post '/registration', -->
   body = yield parse @, limit: '1kb'
   console.log body
   token = body.token
-  fs.writeFileSync './token.txt', body.token
+  fs.writeFileSync 'token.txt', body.token
   @body =
     answer: 'снежные'
 
@@ -32,8 +32,7 @@ app.post '/quiz', -->
       method: 'POST'
       form: response
 
-  console.log body
-  console.log result.body
-  console.log response
+  console.log body, response, result.body
+  console.log '-'.repeat 50
 
 app.listen(process.env.PORT || 5000)

@@ -9,10 +9,9 @@ exports.getPoemIds = getPoemIds = -->
   return parsePoems poemsPage.body
 
 exports.getPoem = getPoem = (id) -->
-  try
-    poemPage = yield request
-      url: "http://ilibrary.ru/text/#{id}/p.1/index.html"
-      encoding: null
+  poemPage = yield request
+    url: "http://ilibrary.ru/text/#{id}/p.1/index.html"
+    encoding: null
   return parsePoem poemPage.body
 
 exports.getPoems = getPoems = -->
