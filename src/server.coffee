@@ -9,8 +9,8 @@ url   = 'http://pushkin-contest.ror.by/quiz'
 token = fs.readFileSync './token.txt', 'utf8'
 
 app = koa()
-app.use router(app)
 app.use(bodyParser())
+app.use router(app)
 
 app.post '/registration', -->
   token = @request.body.token
