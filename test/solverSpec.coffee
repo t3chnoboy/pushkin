@@ -86,6 +86,21 @@ describe 'tasks', ->
       words = solve '5', line
       words.should.equal 'рук,ног'
 
+  # describe 'level 5f', ->
+  #   it 'should find replaced word in given line', ->
+
+  #     line = 'К ногам невест повергли сабля и щит'
+  #     words = solve '5f', line
+  #     words.should.equal 'меч,сабля'
+
+  #     line = 'Вливали в сердце хладный яд.'
+  #     words = solve '5f', line
+  #     words.should.equal 'душу,сердце'
+
+  #     line = 'Чтоб в битвах гром из ног метал'
+  #     words = solve '5f', line
+  #     words.should.equal 'рук,ног'
+
   describe.skip 'when input is fucked up', ->
     it 'should not crap out', ->
       solve '', ''

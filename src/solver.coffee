@@ -31,6 +31,13 @@ level4 = (lines) ->
   matches = re.exec poem.text
   "#{matches[1]},#{matches[2]},#{matches[3]}"
 
+# level5f = (line) ->
+#   words = line.match(/[А-Яа-яЁё]+/g)
+#   re = new RegExp ('(?:' + words.map((word) -> line.replace word, '([А-Яа-яЁё]+)').join('|') + ')')
+#   poem = poems.find (p) -> re.test p.text
+#   for match, index in (poem.text.match re).splice(1)
+#     return "#{match},#{words[index]}" if match?
+
 level5 = (str) ->
   words = str.match /([А-Яа-я]+)/g
   for poem in splitPoems
